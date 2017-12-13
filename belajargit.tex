@@ -110,4 +110,33 @@ Pada bagian terakhir ini, akan digabungkan cabang "readme-edits" dan cabang "mas
 \item Klik \textbf{confirm merge}
 \item Hapus cabang yang sudah digabung.
 \end{enumerate}
+
+\section{Git secara remote}
+Git merupakan aplikasi yang dapat diinstal di masing-masing PC untuk kepentingan sendiri. Namun, jika ingin bekerja sama dengan pengembang lain maka disediakan github. Dengan alamat url "https://github.com". 
+
+Untuk memulai bekerja secara remote, buatlah akun di "https://github.com". Kemudian buat repository baru dengan mengetuk tanda "+" di pojok kanan atas, kemudian pilih "New repository". Atau bisa juga memilih tombol hijau bertuliskan "New Repository" yang ada di bagian kanan tengah. Lihat Gambar \ref{fig:repobaru}.
+
+\begin{figure}[h!]
+\includegraphics[scale=0.5]{image/newrepo.png} 
+\caption{Repository}
+\label{fig:repobaru}
+\end{figure}
+Tekan tombol hijau bertuliskan create repository.
+
+Berikut adalah tatacara untuk membuat repository baru secara remote
+\begin{verbatim}
+echo "# tes" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/enggaralfi/tes.git
+git push -u origin master
+\end{verbatim}
+
+Jika sebelumnya sudah memiliki repository yang sudah matang dan tinggal mengupload saja, silakan ikuti perintah berikut.
+
+\begin{verbatim}
+git remote add origin https://github.com/enggaralfi/tes.git
+git push -u origin master
+\end{verbatim}
 \end{document}
